@@ -47,19 +47,19 @@ function shuffleArray($array){
 
 
 
-// variabile inizializzata a 0 che tiene conto dell'indice della domanda dell'array e del punteggio
+
 $currentQuestion=0;
 if(isset($_POST["currentQuestion"])){
      $currentQuestion = $_POST["currentQuestion"];     
      if($_POST["userAnswer"] == $_SESSION["questions"][$currentQuestion]["answer"] && $currentQuestion<9){
-         // se la risposta è giusta, incrementa currentQuestion e stampa messaggio
+        
          $currentQuestion++;
          echo 'Correct, answer next question.<br><br>';
 
-         // se tutte le domande sono corrette stampa i messaggi e mostra i pulsanti per uscire o per riprovare
+         // if all answers are correct then show the messages and buttons
        } elseif ($_POST["userAnswer"] == $_SESSION["questions"][$currentQuestion]["answer"] && $currentQuestion=9){
         $currentQuestion++;
-        $_SESSION["domande"]=shuffleArray($_SESSION["questions"]);// viene mischiato di nuovo l'array cosi quando si riprova le domande saranno in ordine diverso
+        $_SESSION["domande"]=shuffleArray($_SESSION["questions"]);
         $gamesPlayed++;
         echo "Congratulations, you answered all the questions correctly";
         echo "<br>Your score is ".$currentQuestion."/10<br>";
@@ -72,7 +72,7 @@ if(isset($_POST["currentQuestion"])){
         return;
 
 
-        // se invece una domanda viene sbagliata allora il quiz finisce e vengono mostrati i pulsanti per uscire o riprovare
+        //if one answer is wrong then stop the quiz and show the score and the buttons
        } else {
         $_SESSION["questions"]=shuffleArray($_SESSION["questions"]);// viene mischiato di nuovo l'array cosi quando si riprova le domande saranno in ordine diverso
         $gamesPlayed++;
