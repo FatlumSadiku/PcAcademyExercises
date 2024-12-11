@@ -5,7 +5,7 @@ $cookieName='gamesPlayed';
 $gamesPlayed = getCookie($cookieName);
 $gamesPlayed++;
 valueCookie($cookieName,$gamesPlayed);
-//se variabile session è false allora si torna alla pagina iniziale
+//if session variable is false then access is denied and send back to log in page
 if(!isset($_SESSION['login_approved'])||!$_SESSION['login_approved']){
   header("Location: index.php");
   exit();
