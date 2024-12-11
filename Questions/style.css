@@ -1,0 +1,63 @@
+.index{
+    width: 90%;
+    height:80%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10%;
+  }
+  .title1{
+    font-size: 280%;
+    font-family: sans-serif, Geneva, Tahoma, verdana;
+    color: rgb(116, 77, 3);
+  }
+  #username {
+    font-family:  sans-serif, Geneva, Tahoma, verdana;
+    width: 15%;
+  }
+  #password{
+    font-family:  sans-serif, Geneva, Tahoma, verdana;
+    width: 15%;
+  }
+  .title2{
+    font-size: 280%;
+    font-family: sans-serif, Geneva, Tahoma, verdana;
+    color: rgb(116, 77, 3);
+    text-align: center;
+    margin-top: 15%;
+  }
+  
+  .origin{
+    text-align: center;
+    justify-content: center;
+    margin-top: 15%;
+  }
+  .button1{
+    width: 20%;
+    height: 20%;
+    float: left;
+    margin-left: 30%;
+  
+   display: inline-block;
+  
+  }
+  .button2{
+    width: 20%;
+    height: 20%;
+    float: right;
+    margin-right: 30%;
+    display: inline-block;
+  }
+  #gioco{
+    background-color: rgb(18, 233, 132);
+  }
+  #esci {
+    background-color: rgb(204, 54, 27);
+  }
+  .buba{
+  
+    text-align: center;
+    justify-content: center;
+  }
+  .congrats{
+    text-align: center;
+  }
